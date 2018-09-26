@@ -1,0 +1,32 @@
+<html>
+<head>
+    <!--<script type="text/javascript" src="jquery-1.6.2.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+</head>
+
+<body>  
+
+<button id="ajax">Presioname</button>
+
+<script type="text/javascript">
+    var urlApi;
+    //urlApi = "http://rest-service.guides.spring.io/greeting";
+    urlApi = "http://localhost:8080/api/Persona/47266593"
+    $('#ajax').click(function(){ 
+        $.ajax({
+            url:urlApi
+        }).then(function(data){
+            alert(data.content);
+        })
+    });
+
+</script>
+
+
+
+</body>
